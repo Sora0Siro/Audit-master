@@ -207,6 +207,7 @@ namespace AuditWFA
         {
             try
             {
+                auditoriesDC.Clear();
                 string[] auditories = File.ReadAllLines(AuditoriesPath, Encoding.Unicode);
                 string tmpKey = "";
                 List<string> tmpList = new List<string>();
@@ -352,10 +353,13 @@ namespace AuditWFA
             if (DatabaseSearch.ShowDialog() == DialogResult.OK) FullDirectory = DatabaseSearch.SelectedPath;
             AuditoriesPath = FullDirectory + "\\Auditories.txt";
             FacultiesDirectory = FullDirectory + "\\Faculties";
+            loadSchedule();
+            setAuditoriesFromFile();
         }
 
         private void AboutAuditToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            setAuditoriesFromFile();
             InfoForm inf = new InfoForm(auditoriesDC, AuditoriesPath);
             inf.FormClosed += Inf_FormClosed;
             inf.ShowDialog();

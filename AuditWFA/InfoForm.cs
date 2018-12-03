@@ -29,7 +29,7 @@ namespace AuditWFA
             setDefaultRedactButtonPosition();
 
             ToolTip t = new ToolTip();
-            t.SetToolTip(txt_AuditoryAdd, "ОЦ, лаб, ауд");
+            t.SetToolTip(txt_AuditoryAdd, "ОЦ, оц, лаб, ауд");
         }
 
         //events

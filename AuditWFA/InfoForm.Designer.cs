@@ -448,7 +448,7 @@
             this.ClientSize = new System.Drawing.Size(804, 411);
             this.Controls.Add(this.gB_Adding);
             this.Controls.Add(this.gB_Editing);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "InfoForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Auditories";
