@@ -220,7 +220,10 @@ namespace AuditWFA
                     }
                     else if (auditories[i] == "" || auditories[i] == " ")
                     {
-                        auditoriesDC.Add(tmpKey, tmpList);
+                        if(!auditoriesDC.ContainsKey(tmpKey))
+                        {
+                            auditoriesDC.Add(tmpKey, tmpList);
+                        }
                         tmpKey = "";
                         tmpList = new List<string>();
                     }
